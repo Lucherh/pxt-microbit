@@ -78,25 +78,26 @@ input.onGesture(Gesture.Shake, () => {
 Now what about if **randomNumber** is 4? Let's have the magic 8 ball respond "Definitely!".
 
 ```blocks
-basic.showString("ASK A QUESTION")
-basic.showNumber(8)
-input.onGesture(Gesture.Shake, () => {
+input.onGesture(Gesture.Shake, function () {
     basic.clearScreen()
-    let randomNumber = randint(0, 4)
+    randomNumber = randint(0, 3)
     if (randomNumber == 4) {
-        basic.showString("DEFINATELY")
+        basic.showString("DEFINATLEY")
     } else if (randomNumber == 3) {
         basic.showString("TRY AGAIN")
     } else if (randomNumber == 2) {
         basic.showString("YES")
     } else if (randomNumber == 1) {
         basic.showString("NO")
-    }
-    else {
+    } else {
         basic.showString("I DON'T KNOW")
     }
     basic.showNumber(8)
 })
+let randomNumber = 0
+basic.showString("ASK A QUESTION")
+basic.showNumber(8)
+
 ```
 
 **Challenge 4**
